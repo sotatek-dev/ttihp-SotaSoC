@@ -1,0 +1,3 @@
+[submodule "src/SotaSoC"]
+	path = src/SotaSoC
+	url = git@github.com:sotatek-dev/SotaSoC.git
