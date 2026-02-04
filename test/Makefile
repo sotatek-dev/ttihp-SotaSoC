@@ -6,7 +6,24 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = project.v \
+	SotaSoC/rtl/soc.sv \
+	SotaSoC/rtl/mem_ctl.sv \
+	SotaSoC/rtl/rv32c_decompress.v \
+	SotaSoC/rtl/rv32i_alu.v \
+	SotaSoC/rtl/rv32i_core.sv \
+	SotaSoC/rtl/rv32i_csr.v \
+	SotaSoC/rtl/rv32i_register.v \
+	SotaSoC/rtl/debug_defines.vh \
+	SotaSoC/rtl/peri/gpio/gpio.v \
+	SotaSoC/rtl/peri/i2c/i2c_master.v \
+	SotaSoC/rtl/peri/mem/qspi_mem.v \
+	SotaSoC/rtl/peri/pwm/pwm.v \
+	SotaSoC/rtl/peri/spi/spi_master.v \
+	SotaSoC/rtl/peri/timer/mtime_timer.v \
+	SotaSoC/rtl/peri/uart/uart_ctl.v \
+	SotaSoC/rtl/peri/uart/uart_tx.v \
+	SotaSoC/rtl/peri/uart/uart_rx.v
 
 ifneq ($(GATES),yes)
 
