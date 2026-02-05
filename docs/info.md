@@ -23,8 +23,8 @@
 
 A BSP is available for **FreeRTOS** and **bare-metal** development:
 
-- [FreeRTOS BSP](https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/FreeRTOS)
-- [Bare-Metal BSP](https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples)
+- [FreeRTOS BSP](https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples-freertos)
+- [Bare-Metal BSP](https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples-baremetal)
 
 ### Demo
 
@@ -43,7 +43,7 @@ For more detailed technical information, see [https://github.com/sotatek-dev/Sot
 
 ### 1. Write firmware to Flash
 
-Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/rv32e-bsp/blob/main/examples/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
+Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/rv32e-bsp/blob/main/examples-baremetal/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
 
 You can also use any other example from the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
 
