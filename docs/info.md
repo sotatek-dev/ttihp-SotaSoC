@@ -61,6 +61,6 @@ Reset the board. The LED should blink.
 
 ## External hardware
 
-To test **blink**: you need a **[QSPI Pmod](https://github.com/mole99/qspi-pmod)** (cut the trace for **RAM B** / **PMOD8** so that uio[7] can be used as GPIO) and **one LED** connected to pin **uio[7]** as described in [How to test](#how-to-test) above.
+To test **blink**: you need a **[QSPI Pmod](https://github.com/mole99/qspi-pmod)** (cut the trace for **RAM B** / **PMOD8** so that uio[7] can be used as GPIO) and **one LED** connected to pin **uio[7]** as described in How to test above.
 
 To test **other peripherals** (UART, PWM, SPI, I2C, etc.), refer to the specific examples in the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
