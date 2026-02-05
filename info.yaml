@@ -2,7 +2,7 @@
 project:
   title:        "SotaSoC"      # Project title
   author:       "SotaTek"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  discord:      "sotatek_thanhtran"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "RISC-V 32-bit embedded SoC with RV32EC_Zicsr_Zifencei core featuring SPI, I2C, UART, PWM, and GPIO peripherals"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     64000000       # Clock frequency in Hz (or 0 if not applicable)
