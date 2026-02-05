@@ -41,26 +41,65 @@ For more detailed technical information, see [https://github.com/sotatek-dev/Sot
 
 ## How to test
 
-### 1. Write firmware to Flash
+### Blink
 
-Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/rv32e-bsp/blob/main/examples-baremetal/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
+This test verifies the basic functionality of the board by blinking an LED.
 
-You can also use any other example from the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
+1. **Write firmware to Flash**
 
-### 2. Connect an LED to uio[7]
+   Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/rv32e-bsp/blob/main/examples-baremetal/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
 
-SotaSoC only supports **RAM A** on the [QSPI Pmod](https://github.com/mole99/qspi-pmod). Cut the trace for **RAM B** and use **uio[7]** as a GPIO pin.
 
-Connect one LED (with a suitable series resistor) to pin **uio[7]**.
 
-### 3. Reset and run
+2. **Connect an LED to uio[7]**
 
-Reset the board. The LED should blink.
+   SotaSoC only supports **RAM A** on the [QSPI Pmod](https://github.com/mole99/qspi-pmod). Cut the trace for **RAM B** and use **uio[7]** as a GPIO pin.
+
+   Connect one LED (with a suitable series resistor) to pin **uio[7]**.
+
+3. **Reset and run**
+
+   Reset the board. The LED should blink.
+
+### ST7789 LCD test
+
+This test verifies the ability to drive the ST7789 LCD via SPI. Follow the instructions below:
+
+1. **Write firmware to Flash**
+
+   Download the firmware from [spi-st7789.bin](https://github.com/sotatek-dev/SotaSoC-BSP/blob/main/examples-baremetal/spi-st7789/build/spi-st7789.bin), then write it to Flash at address **0x0000_0000**.
+
+2. **Wiring**
+
+   Connect the LCD to the development board as follows:
+
+   | LCD Pin     | Development Board Pin |
+   | :---------- | :-------------------- |
+   | VCC         | VCC                   |
+   | GND         | GND                   |
+   | CS          | uo[3]                 |
+   | SCK         | uo[4]                 |
+   | SDI (MOSI)  | uo[5]                 |
+   | DC          | uo[6]                 |
+   | RST         | uo[7]                 |
+   | LED         | VCC                   |
+
+3. **Expected Result**
+
+   After reset, you will see some content displayed on the LCD as shown in the figure below:
+
+   ![LCD demo (320×240 ST7789)](st7789-demo.jpeg)
+
+### Other examples
+
+The [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository provides other sample firmware (e.g. UART, PWM, I2C). You can download any of them and write the binary to flash at address **0x0000_0000** to run different demos or test other peripherals.
 
 ---
 
 ## External hardware
 
 To test **blink**: you need a **[QSPI Pmod](https://github.com/mole99/qspi-pmod)** (cut the trace for **RAM B** / **PMOD8** so that uio[7] can be used as GPIO) and **one LED** connected to pin **uio[7]** as described in How to test above.
+
+To test **ST7789 LCD**: you need a **320×240 ST7789 LCD** (SPI). Connect it to the development board as described in the ST7789 LCD test section above.
 
 To test **other peripherals** (UART, PWM, SPI, I2C, etc.), refer to the specific examples in the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
