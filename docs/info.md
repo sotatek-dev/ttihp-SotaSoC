@@ -4,7 +4,7 @@
 
 ### Supported ISA Extensions
 
-- **E** — RV32E: 32-bit RISC-V with 16 general-purpose registers (embedded profile).
+- **I** — RV32I: 32-bit RISC-V base integer instruction set with 32 general-purpose registers.
 - **C** — RISC-V Compressed instructions.
 - **Zicsr** — Control and Status Register extension.
 - **Zifencei** — Instruction-fetch fence extension.
@@ -15,7 +15,7 @@
 - **UART** — programmable baud rate via 10-bit clock divider; default 115200 at 64 MHz
 - **48-bit timer** (mtime)
 - **13× GPIO** — 1 bidirectional (in/out), 6 input (with interrupt), 6 output
-- **2× PWM** — 2 independent channels; 16-bit period and duty (in clock cycles), configurable frequency and duty cycle per channel
+- **PWM** — 16-bit period and duty (in clock cycles), configurable frequency and duty cycle per channel
 - **SPI** — master; full mode support (CPOL/CPHA), clock up to 16 MHz, configurable; 4-byte buffer
 - **I2C** — master; clock configurable via 8-bit prescaler — 100 kHz, 400 kHz, 1 MHz, and others; START, STOP, repeated START, byte read/write with ACK/NACK
 
@@ -47,7 +47,7 @@ This test verifies the basic functionality of the board by blinking an LED.
 
 1. **Write firmware to Flash**
 
-   Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/rv32e-bsp/blob/main/examples-baremetal/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
+   Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/SotaSoC-BSP/blob/main/examples-baremetal/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
 
 
 
