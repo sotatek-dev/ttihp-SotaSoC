@@ -31,6 +31,7 @@ A BSP is available for **FreeRTOS** and **bare-metal** development:
 SotaSoC is capable of driving real-world applications such as a **320×240 ST7789 LCD** display at ~10 FPS via SPI at 16 MHz clock.
 
 ![LCD demo (320×240 ST7789)](st7789-tt-demo.jpeg)
+
 *The photo above was taken from a test on an Artix 7 FPGA; the tapeout chip is not yet available.*
 
 More examples and demos are available in the SotaSoC-BSP (https://github.com/sotatek-dev/SotaSoC-BSP) repository.
@@ -106,7 +107,7 @@ The https://github.com/sotatek-dev/SotaSoC-BSP repository provides other sample 
 
 ## External hardware
 
-To test **blink**: you need a **[QSPI Pmod](https://github.com/mole99/qspi-pmod)** and **one LED** connected to pin **uo_out[2]** as described in How to test above.
+To test **blink**: you need a **[QSPI Pmod](https://github.com/mole99/qspi-pmod)** and **two LEDs** connected to **uo_out[2]** and **uo_out[1]** as described in How to test above.
 
 To test **ST7789 LCD**: you need a **320×240 ST7789 LCD** (SPI). Connect it to the development board as described in the ST7789 LCD test section above.
 
