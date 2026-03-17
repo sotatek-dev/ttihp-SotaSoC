@@ -8,6 +8,7 @@ TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = project.v \
 	SotaSoC/rtl/soc.sv \
+	SotaSoC/rtl/sync_reset.v \
 	SotaSoC/rtl/mem_ctl.sv \
 	SotaSoC/rtl/rv32c_decompress.v \
 	SotaSoC/rtl/rv32i_alu.v \
